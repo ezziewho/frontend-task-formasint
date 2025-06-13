@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:400,700&display=swap');
+
+header {
+  display: block;
+}
+
+h1 {
+    Width: Fill (1,836px);
+    Height: Hug(138px);
+    Gap: 10px;
+    text-transform: capitalize;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.desktop-text-styles{
+Font: Inter;
+font-weight:
+700;
+Size:
+16px;
+line-height: 140%;
+letter-spacing: -1%;
+
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.nav-left, .nav-center, .nav-right {
+  display: flex;
+  align-items: center;
+    gap: 20px;
+}
