@@ -4,35 +4,42 @@ header {
   display: block;
 }
 
+
 h1 {
     Width: Fill (1,836px);
     Height: Hug(138px);
     Gap: 10px;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
-.hero-img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+/* navbar */
+html {
+  scroll-behavior: smooth;
 }
 
-.desktop-text-styles{
-Font: Inter;
-font-weight:
-700;
-Size:
-16px;
-line-height: 140%;
-letter-spacing: -1%;
+a {
+  text-decoration: none; /* Początkowo bez podkreślenia */
+  color:#1D1D1D;
+}
 
+a:hover {
+  text-decoration: underline; /* Podkreślenie po najechaniu */
+  transition: opacity 0.3s;
+}
+
+a:visited{
+  color:#1D1D1D;
 }
 
 .navbar-header {
+  z-index: 99;
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  background-color: white;
 }
 
 .nav-left, .nav-center, .nav-right {
@@ -40,3 +47,54 @@ letter-spacing: -1%;
   align-items: center;
     gap: 20px;
 }
+
+.icon-hover {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+.icon {
+  position: absolute;
+  top: 7px;
+  left: 0;
+
+  transition: opacity 0.3s;
+}
+
+.icon.filled {
+  opacity: 0;
+}
+
+.icon-hover:hover .filled {
+  opacity: 1;
+}
+
+.icon-hover:hover .outline {
+  opacity: 0;
+}
+
+.desktop-body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%; /* or 22.4px if you prefer fixed units */
+  letter-spacing: -1%; /* Not valid in CSS, use em instead */
+  text-transform: uppercase;
+  color: #1D1D1D
+}
+
+
+/* end of nabar */
+
+
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
