@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Inter:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Inter:400,700&display=swap");
 
 header {
   display: block;
 }
 
-
 h1 {
-    Width: Fill (1,836px);
-    Height: Hug(138px);
-    Gap: 10px;
-    text-transform: uppercase;
+  width: Fill (1, 836px);
+  height: Hug(138px);
+  gap: 10px;
+  text-transform: uppercase;
 }
 
 /* navbar */
@@ -19,7 +18,7 @@ html {
 
 a {
   text-decoration: none; /* Początkowo bez podkreślenia */
-  color:#1D1D1D;
+  color: #1d1d1d;
 }
 
 a:hover {
@@ -27,8 +26,8 @@ a:hover {
   transition: opacity 0.3s;
 }
 
-a:visited{
-  color:#1D1D1D;
+a:visited {
+  color: #1d1d1d;
 }
 
 .navbar-header {
@@ -38,14 +37,41 @@ a:visited{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 10px 40px;
   background-color: white;
 }
 
-.nav-left, .nav-center, .nav-right {
+.navbar {
+  display: flex;
+  gap: 32px; /* Increased spacing between navbar items */
+}
+
+.nav-left,
+.nav-right {
   display: flex;
   align-items: center;
-    gap: 20px;
+  gap: 10px;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 0 !important;
+}
+
+.nav-left p,
+.nav-right p {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.nav-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-grow: 1; */
+  flex: 1;
+  gap: 12px;
 }
 
 .icon-hover {
@@ -75,20 +101,38 @@ a:visited{
 .icon-hover:hover .outline {
   opacity: 0;
 }
+/* end of nabar */
+
+/* czcionki z figmy */
 
 .desktop-body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 140%; /* or 22.4px if you prefer fixed units */
   letter-spacing: -1%; /* Not valid in CSS, use em instead */
   text-transform: uppercase;
-  color: #1D1D1D
+  color: #1d1d1d;
 }
 
+.desktop-body-large {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%; /* or 22.4px if you prefer fixed units */
+  letter-spacing: 0%; /* Not valid in CSS, use em instead */
+  color: #1d1d1d;
+}
 
-/* end of nabar */
-
+.desktop-h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 120%; /* or 38.4px if you prefer fixed units */
+  letter-spacing: -1%; /* Not valid in CSS, use em instead */
+  color: #1d1d1d;
+}
+/* end of czcionki z figmy */
 
 
 .hero-img {
@@ -97,4 +141,44 @@ a:visited{
   border-radius: 8px;
 }
 
+.product-listing-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 4fr));
+  gap: 200px;
+}
 
+.product-listing-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-image-container {
+  position: relative;
+  width: 100%;
+}
+
+.product-image-label {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #1d1d1d;
+  font-family: "Inter", sans-serif;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 16px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.product-image-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: pink;
+  border-radius: 8px;
+  z-index: 1;
+}
